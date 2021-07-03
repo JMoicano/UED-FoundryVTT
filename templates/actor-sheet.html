@@ -7,15 +7,12 @@
             <h1 class="charname">
                 <input name="name" type="text" value="{{data.name}}" placeholder="Name" />
             </h1>
+
             <div class="resource">
-                <input type="number" name="data.health.value" value="{{systemData.health.value}}"/>
+                <label>{{ localize "Integrity" }}</label>
+                <input type="number" name="data.data.integrity.value" value="{{data.data.integrity.value}}"/>
                 <span> / </span>
-                <input type="number" name="data.health.max" value="{{systemData.health.max}}"/>
-            </div>
-            <div class="resource">
-                <input type="number" name="data.power.value" value="{{systemData.power.value}}"/>
-                <span> / </span>
-                <input type="number" name="data.power.max" value="{{systemData.power.max}}"/>
+                <input disabled type="number" name="data.data.integrity.max" value="{{data.data.integrity.max}}"/>
             </div>
         </div>
     </header>
@@ -98,13 +95,8 @@
                 <a class="attribute-control" data-action="create" data-group="{{group}}"><i class="fas fa-plus" ></i></a>
             </header>
 
-            {{!-- Render the attribute list partial. --}}
-            <!-- {{> "systems/ued/templates/parts/sheet-attributes.html" attributes=systemData.ungroupedAttributes dtypes=dtypes}} -->
-
             {{!-- Render the grouped attributes partial and control. --}}
             <div class="groups">
-                <!-- {{> "systems/ued/templates/parts/sheet-groups.html" attributes=systemData.groupedAttributes groups=systemData.groups dtypes=dtypes}} -->
-
                 <div class="group-controls flexrow">
                     <input class="group-prefix" type="text" value=""/>
                     <a class="button group-control" data-action="create-group"><i class="fas fa-plus"></i>Add Attribute Group</a>

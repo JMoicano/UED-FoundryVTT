@@ -11,4 +11,10 @@ export class SimpleActorSheet extends ActorSheet {
       dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}]
     });
   }
+
+  getData(data) {
+    const context = super.getData(data)
+    console.log('[SimpleActorSheet.getData]', context);
+    return context;
+  }
 }

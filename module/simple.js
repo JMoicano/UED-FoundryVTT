@@ -9,7 +9,7 @@ import { preloadHandlebarsTemplates } from "./templates.js";
 /**
  * Init hook.
  */
-Hooks.once("init", async function() {
+Hooks.once("init", async () => {
   console.log(`Initializing Simple ued System`);
 
   CONFIG.Combat.initiative = {formula: "1d20", decimals: 2};
@@ -24,6 +24,8 @@ Hooks.once("init", async function() {
 
 
   Handlebars.registerHelper('slugify', (value) => value.slugify({strict: true}));
+  Handlebars.registerHelper('localize', (value) => game.i18n.localize(value));
+  
   await preloadHandlebarsTemplates();
 });
 
