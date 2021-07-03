@@ -95,15 +95,15 @@
                 <span class="attribute-value">{{localize "SIMPLE.AttributeValue"}}</span>
                 <span class="attribute-label">{{localize "SIMPLE.AttributeLabel"}}</span>
                 <span class="attribute-dtype">{{localize "SIMPLE.AttributeDtype"}}</span>
-                <a class="attribute-control" data-action="create" data-group="{{group}}"><i class="fas fa-plus"></i></a>
+                <a class="attribute-control" data-action="create" data-group="{{group}}"><i class="fas fa-plus" ></i></a>
             </header>
 
             {{!-- Render the attribute list partial. --}}
-            {{> "systems/worldbuilding/templates/parts/sheet-attributes.html" attributes=systemData.ungroupedAttributes dtypes=dtypes}}
+            <!-- {{> "systems/ued/templates/parts/sheet-attributes.html" attributes=systemData.ungroupedAttributes dtypes=dtypes}} -->
 
             {{!-- Render the grouped attributes partial and control. --}}
             <div class="groups">
-                {{> "systems/worldbuilding/templates/parts/sheet-groups.html" attributes=systemData.groupedAttributes groups=systemData.groups dtypes=dtypes}}
+                <!-- {{> "systems/ued/templates/parts/sheet-groups.html" attributes=systemData.groupedAttributes groups=systemData.groups dtypes=dtypes}} -->
 
                 <div class="group-controls flexrow">
                     <input class="group-prefix" type="text" value=""/>
